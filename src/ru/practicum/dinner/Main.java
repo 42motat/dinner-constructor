@@ -1,6 +1,6 @@
 package ru.practicum.dinner;
 
-import java.util.HashMap;
+// import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Scanner;
 
