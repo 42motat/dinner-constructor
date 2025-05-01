@@ -41,15 +41,19 @@ public class DinnerConstructor {
     public void constructCombos(int numberOfCombos) {
 
         ArrayList<ArrayList<String>> combos = new ArrayList<>();
+        System.out.println(swapForCombo);
         for (int i = 0; i < numberOfCombos; i++) {
             ArrayList<String> combo = new ArrayList<>();
             for (String menuKey : swapForCombo) {
                 dishes = menu.get(menuKey);
                 int index = random.nextInt(dishes.size());
                 String dish = dishes.get(index);
+                System.out.println(dish);
                 combo.add(dish);
+                System.out.println(combo);
             }
             combos.add(combo);
+            System.out.println(combos);
         }
         for (int i = 0; i < combos.size(); i++) {
             System.out.println("Комбо " + (i + 1));
@@ -63,7 +67,7 @@ public class DinnerConstructor {
         for (String type : menu.keySet()) {
             System.out.println("тип блюда " + type + " содержит:");
             for (String dish : menu.get(type)) {
-                System.out.println("    " + dish);
+                System.out.println("  - " + dish);
             }
         }
     }
